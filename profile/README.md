@@ -20,9 +20,9 @@ It provides:
 
 ## Another standard?!
 
-You may have heard about the apps in apps pattern and be thinking: "Another
-standard, really?!". I understand your concern, but stick around and we'll show
-you why this is just so cool.
+You may have heard about the [apps of apps](https://argo-cd.readthedocs.io/en/stable/operator-manual/cluster-bootstrapping/#app-of-apps-pattern)
+pattern and be thinking: "Another standard, really?!". I understand your concern, but
+stick around and we'll show you why this is worth your time!
 
 First: The Apps in apps pattern mostly concerns using Argo apps to hold other Argo
 apps. This is not mutually exclusive with the apps repo architecture and both can be
@@ -64,6 +64,18 @@ Finally, giving the product teams self service and autonomy must not come at the
 of security. We need to ensure that the principle of least privilige is maintained, and
 that one team cannot affect another team's deployments in a multi-tenant cluster.
 Security and autonomy must go hand in hand.
+
+## The apps repository
+
+![image](https://github.com/user-attachments/assets/859bb108-4c8d-4905-a107-5923be301056)
+
+> TODO
+
+## Clear ownership
+
+![image](https://github.com/user-attachments/assets/88d33d95-d72b-4fb5-b761-60a41df62939)
+
+> TODO
 
 ## Show me an example!
 
