@@ -67,9 +67,29 @@ Security and autonomy must go hand in hand.
 
 ## The apps repository
 
-![image](https://github.com/user-attachments/assets/859bb108-4c8d-4905-a107-5923be301056)
+<p align="middle">
+  <img width="50%" src="https://github.com/user-attachments/assets/859bb108-4c8d-4905-a107-5923be301056" />
+</p>
 
-> TODO
+The Apps repo architecture mainly concerns itself with the structure of the manifest
+repositories, known here as the apps repositories. Every apps repo will have the
+following directories nested within each other:
+
+* `env`: This is a directory that groups all the subsequent folders
+* `cluster`: Inside the `env` directory we will have a set of directories which are
+  named the same as the clusters which you would like to deploy to. In other words,
+  these directory names match up with the cluster names in Argo CD
+* `namespace`: Inside the `cluster` directory is where you will find the namespaces
+  that are deployed to that cluster. New directories are picked up by Argo and
+  automatically added as apps
+* Finally the contents of `namespace` can be anything that Argo CD supports. For
+  example this can be plain yaml files that you want to have synced, or a
+  `Chart.yaml` that describes a helm chart with template files
+
+In addition to this directory structure, optional directories for holding templates
+and reusable elements are recommended to be put on the root. In the above example
+you will see a kustomize `bases` directory added that is referenced by each 
+kustomize file in the namespace directories to reduce duplication.
 
 ## Clear ownership
 
