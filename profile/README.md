@@ -93,9 +93,36 @@ kustomize file in the namespace directories to reduce duplication.
 
 ## Clear ownership
 
-![image](https://github.com/user-attachments/assets/88d33d95-d72b-4fb5-b761-60a41df62939)
+<p align="middle">
+  <img width="50%" src="https://github.com/user-attachments/assets/88d33d95-d72b-4fb5-b761-60a41df62939" />
+</p>
 
-> TODO
+The apps repository structure enables a clear ownership of resources between
+infrastructure and product teams. In this system the product teams do not burden
+themselves with writing applications to set up deployment, all they do is create
+directories and populate them with yaml files. This gives them full ownership
+over their namespaces they have created by making directories, but not any other
+namespaces or cluster scoped resources.
+
+Infrastructure teams own cluster scoped resources and ApplicationSets that 
+generate Argo Applications. The ApplicationSets monitor the product teams'
+apps repositories and create namespaces when they detect new directories. This
+means that the infrastructure teams also implicitly own the structure of the
+namespaces that are created, whereas the product teams control the instantiation 
+of them.
+
+<p align="middle">
+<a href="https://www.youtube.com/watch?v=8Zwftqf8g8w">
+  <img width="50%" src="https://github.com/user-attachments/assets/5bda7118-97a0-44e3-9015-fa2bc9ca7378" />
+</a>
+</p>
+
+Marco De Benedictis held a good talk on KubeCon Europe 2024 that recommends
+exactly this structure. Namespaces should be assigned to tenants, but managed
+by a platform team.
+
+A challenge is automating the creation of ApplicationSets as new teams are
+onboarded.
 
 ## Show me an example!
 
