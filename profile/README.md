@@ -122,7 +122,8 @@ exactly this structure. Namespaces should be assigned to tenants, but managed
 by a platform team.
 
 A challenge is automating the creation of ApplicationSets as new teams are
-onboarded.
+onboarded. One way to solve this is with automation like issueops + actions
+in GitHub.
 
 ## What about security?
 
@@ -150,6 +151,14 @@ however, is required, as it helps prevent name colliions like the prefix
 
 The way this is done in practice is by defining an Argo CD [AppProject](https://github.com/apps-repositories/example-infra-apps/blob/main/examples/2/appproject.yaml)
 that requires target namespaces to be part of the prefix pattern.
+
+## Self service customization
+
+> TODO
+
+## Multi source, default resources
+
+> TODO
 
 ## Show me an example!
 
