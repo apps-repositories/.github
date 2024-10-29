@@ -148,6 +148,9 @@ an app and a branch, but this this is just a recommendation. The dash itself,
 however, is required, as it helps prevent name colliions like the prefix 
 `car` and `carrier` overlapping.
 
+The way this is done in practice is by defining an Argo CD [AppProject](https://github.com/apps-repositories/example-infra-apps/blob/main/examples/2/appproject.yaml)
+that requires target namespaces to be part of the prefix pattern.
+
 ## Show me an example!
 
 Of course! Have a look at:
