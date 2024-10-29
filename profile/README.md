@@ -124,6 +124,30 @@ by a platform team.
 A challenge is automating the creation of ApplicationSets as new teams are
 onboarded.
 
+## What about security?
+
+<p align="middle">
+  <img width="40%" src="https://github.com/user-attachments/assets/f6dcfd2c-9c49-4a9d-8769-eda317837122" />
+</p>
+
+Security is obviously important, and since this architecture defines 
+self-service provisioning of namespaces we need to make sure we're not allowing
+teams to for example overwrite other teams' namespaces.
+
+The way this is done is to assign each team one or several unique "prefixes".
+Let's say your product team owns two products called Oslo and Bergen. These
+two prefixes would be assigned to the product team by the infrastructure team
+so that the product team could create as many namespaces they like that start
+with `oslo-` or `bergen-`. This way the team can create namespaces for preview
+environments like pull requests and long-lived namespaces like what is
+currently on the main branch.
+
+Your organization can define what follows the dash. A common pattern is to have
+the branch name of the source code repo so that there is a 1:1 mapping between
+an app and a branch, but this this is just a recommendation. The dash itself,
+however, is required, as it helps prevent name colliions like the prefix 
+`car` and `carrier` overlapping.
+
 ## Show me an example!
 
 Of course! Have a look at:
