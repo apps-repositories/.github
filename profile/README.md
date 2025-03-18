@@ -167,4 +167,5 @@ Of course! Have a look at:
 * [An example apps repo for a platform team](https://github.com/apps-repositories/example-infra-apps)
 * [An example apps repo for a product team](https://github.com/apps-repositories/example-team-apps)
 * [The Apps Repositories blog](https://skip.kartverket.no/blog/introducing-apps-repositories)
+* [Argo CD on easymode on YouTube](https://www.youtube.com/watch?v=1dZzmygm538)
 * [Argo CD on easymode - the presentation](https://slides.eliine.dev/argocd-easymode)
